@@ -72,10 +72,10 @@ func followUserKeyword(keyword string, count int) {
 			}
 			if !tweet.User.Following {
 				user, err := api.FollowUser(tweet.User.ScreenName)
-				i++
 				if err != nil {
 					log.Panic(err)
 				}
+				i++
 
 				fmt.Println("[", i, "] ", user.ScreenName, " followed.")
 			}
